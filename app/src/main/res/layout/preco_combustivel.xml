@@ -2,69 +2,64 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/tela1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/laranja">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:layout_width="258dp"
         android:layout_height="211dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
+        app:layout_constraintVertical_bias="0.088"
         app:srcCompat="@drawable/bomba_combustivel" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="386dp"
-        android:layout_height="116dp"
+        android:id="@+id/textView2"
+        android:layout_width="321dp"
+        android:layout_height="61dp"
         android:gravity="center"
-        android:text="Calculadora de gasto de combustível"
-        android:textColor="@color/black"
+        android:text="Preço do combustível:"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.254" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="360dp"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/preco_combustivel"
+        android:layout_width="327dp"
         android:layout_height="60dp"
-        android:gravity="center"
-        android:text="Quer descobrir quanto do seu gasto será em combustível na sua viagem?"
-        android:textColor="@color/black"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.318" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="310dp"
-        android:layout_height="50dp"
-        android:backgroundTint="@color/black"
-        android:text="Vamos lá!"
-        android:textColor="@color/white"
-        android:textSize="14dp"
+        android:background="@drawable/rounded_bg"
+        android:hint="Digite o preço do combustível, ex: 1.64"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textSize="15dp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.178" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
+        android:text="Enviar"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preco_combustivel"
+        app:layout_constraintVertical_bias="0.402" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
