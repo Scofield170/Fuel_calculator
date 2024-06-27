@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CombustivelActivity"
+    android:id="@+id/tela2">
 
     <ImageView
         android:id="@+id/imageView"
@@ -14,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088"
+        app:layout_constraintVertical_bias="0.132"
         app:srcCompat="@drawable/bomba_combustivel" />
 
     <TextView
@@ -38,10 +40,10 @@
         android:layout_height="60dp"
         android:background="@drawable/rounded_bg"
         android:hint="Digite o preço do combustível, ex: 1.64"
+        android:textColorHint="@color/black"
         android:inputType="numberDecimal"
         android:maxLength="6"
         android:textSize="15dp"
-        android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,13 +55,13 @@
         android:id="@+id/button2"
         android:layout_width="310dp"
         android:layout_height="50dp"
-        android:text="Enviar"
         android:backgroundTint="@color/black"
+        android:text="Enviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/preco_combustivel"
-        app:layout_constraintVertical_bias="0.402" />
+        app:layout_constraintVertical_bias="0.478" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
