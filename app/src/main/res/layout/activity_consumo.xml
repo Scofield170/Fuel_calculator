@@ -2,10 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tela3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CombustivelActivity"
-    android:id="@+id/tela2">
+    tools:context=".ConsumoActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -21,11 +21,11 @@
         app:srcCompat="@drawable/bomba_combustivel" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="321dp"
         android:layout_height="61dp"
         android:gravity="center"
-        android:text="Preço do combustível:"
+        android:text="Consumo do veículo:"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,24 +36,24 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/preco_combustivel"
+        android:id="@+id/consumo_veiculo"
         android:layout_width="327dp"
         android:layout_height="60dp"
         android:background="@drawable/rounded_bg"
         android:gravity="center"
-        android:hint="Digite o preço do combustível, ex: 1.64"
+        android:hint="Digite o consumo do veículo, ex: 15 Km/l"
         android:inputType="numberDecimal"
-        android:maxLength="6"
+        android:maxLength="4"
         android:textColorHint="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.239" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         android:layout_width="306dp"
         android:layout_height="49dp"
         android:backgroundTint="@color/black"
@@ -64,7 +64,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/preco_combustivel"
+        app:layout_constraintTop_toBottomOf="@+id/consumo_veiculo"
         app:layout_constraintVertical_bias="0.412" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

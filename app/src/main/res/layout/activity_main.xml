@@ -10,6 +10,7 @@
 
     <ImageView
         android:id="@+id/imageView2"
+        android:foregroundGravity="center"
         android:layout_width="258dp"
         android:layout_height="211dp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -59,6 +60,7 @@
         android:textColor="@color/white"
         android:textSize="14dp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
