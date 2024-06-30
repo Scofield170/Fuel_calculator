@@ -13,10 +13,16 @@
         android:theme="@style/Theme.Fuel_calculator"
         tools:targetApi="31">
         <activity
+            android:name=".ResultadoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrecoActivity"
+            android:exported="false" />
+        <activity
             android:name=".ConsumoActivity"
             android:exported="false" />
         <activity
-            android:name=".CombustivelActivity"
+            android:name=".DistanciaActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

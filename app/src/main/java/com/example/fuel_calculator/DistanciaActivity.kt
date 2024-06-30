@@ -6,37 +6,35 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
 
-class CombustivelActivity : AppCompatActivity() {
+class DistanciaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_combustivel)
+        setContentView(R.layout.activity_distancia)
         enableEdgeToEdge()
 
-        val button2 = findViewById<Button>(R.id.button2)
-        val edtCombustivel = findViewById<EditText>(R.id.preco_combustivel)
+        val buttonDistancia = findViewById<Button>(R.id.button_distancia)
+        val edtDistancia = findViewById<EditText>(R.id.distancia)
 
-        button2.setOnClickListener {
-            val combustivelStr: String = edtCombustivel.text.toString()
+        buttonDistancia.setOnClickListener {
+            val distanciaStr: String = edtDistancia.text.toString()
 
-            if (combustivelStr.isEmpty()) {
+            if (distanciaStr.isEmpty()) {
 
                 Snackbar
                     .make(
-                        edtCombustivel,
+                        edtDistancia,
                         "Preencha todos os campos",
                         Snackbar.LENGTH_LONG
                     )
                     .show()
 
             } else {
-                val combustivel = combustivelStr.toFloat()
+                val distancia = distanciaStr.toFloat()
 
                 val intent = Intent(this, ConsumoActivity::class.java)
-                intent.putExtra(KEY_COMBUSTIVEL, combustivel)
+                intent.putExtra(KEY_DISTANCIA, distancia)
                 startActivity(intent)
             }
         }

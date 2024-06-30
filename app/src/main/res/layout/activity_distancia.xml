@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConsumoActivity">
+    tools:context=".DistanciaActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -24,7 +24,7 @@
         android:layout_width="321dp"
         android:layout_height="61dp"
         android:gravity="center"
-        android:text="Consumo do veículo:"
+        android:text="Distância até o destino:"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textColor="@color/black"
@@ -36,14 +36,14 @@
         app:layout_constraintVertical_bias="0.19" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/consumo_veiculo"
+        android:id="@+id/distancia"
         android:layout_width="327dp"
         android:layout_height="60dp"
         android:background="@drawable/rounded_bg"
         android:gravity="center"
-        android:hint="Digite o consumo do veículo, ex: 15 Km/l"
+        android:hint="Digite a distância até o destino, ex: 120 Km"
         android:inputType="numberDecimal"
-        android:maxLength="4"
+        android:maxLength="6"
         android:textColorHint="@color/black"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,18 +53,18 @@
         app:layout_constraintVertical_bias="0.239" />
 
     <Button
-        android:id="@+id/button_consumo"
+        android:id="@+id/button_distancia"
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
-        android:gravity="center"
         android:textSize="14dp"
-        android:text="Enviar consumo"
+        android:gravity="center"
+        android:text="Enviar distância"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consumo_veiculo"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintTop_toBottomOf="@+id/distancia"
+        app:layout_constraintVertical_bias="0.428" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

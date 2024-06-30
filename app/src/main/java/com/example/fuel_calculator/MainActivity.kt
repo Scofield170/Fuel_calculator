@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,10 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         enableEdgeToEdge()
 
-            val button = findViewById<Button>(R.id.button)
+            val button = findViewById<Button>(R.id.vamos_la)
 
             button.setOnClickListener {
-                val intent = Intent(this, CombustivelActivity::class.java)
+                val intent = Intent(this, DistanciaActivity::class.java)
                 startActivity(intent)
         }
     }

@@ -10,40 +10,39 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.snackbar.Snackbar
 
-const val KEY_DISTANCIA = "ConsumoActivity.KEY_DISTANCIA"
+const val KEY_COMBUSTIVEL = "PrecoActivity.KEY_PRECO"
 
-class ConsumoActivity : AppCompatActivity() {
+class PrecoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_consumo)
+        setContentView(R.layout.activity_preco)
 
-        val distancia = intent.getFloatExtra(KEY_DISTANCIA, 0f)
-        val edtConsumo = findViewById<EditText>(R.id.consumo_veiculo)
+        val combustuivel = intent.getFloatExtra(KEY_COMBUSTIVEL, 0f)
+        val edtPreco = findViewById<EditText>(R.id.preco_combustivel)
 
-        val buttonConsumo = findViewById<Button>(R.id.button_consumo)
+        val buttonPreco = findViewById<Button>(R.id.button_preco)
 
-        buttonConsumo.setOnClickListener {
-            val consumoStr: String = edtConsumo.text.toString()
+        buttonPreco.setOnClickListener {
+            val precoStr: String = edtPreco.text.toString()
 
-            if (consumoStr.isEmpty()) {
+            if (precoStr.isEmpty()) {
 
                 Snackbar
                     .make(
-                        edtConsumo,
+                        edtPreco,
                         "Preencha todos os campos",
                         Snackbar.LENGTH_LONG
                     )
                     .show()
 
             } else {
-                val consumo = consumoStr.toFloat()
-                val combustivel = distancia / consumo
+                val preco = precoStr.toFloat()
+                val resultado = combustuivel * preco
 
-                val intent = Intent(this, PrecoActivity::class.java)
-                intent.putExtra(KEY_COMBUSTIVEL, combustivel)
+                val intent = Intent(this, ResultadoActivity::class.java)
+                intent.putExtra(KEY_PRECO, resultado)
                 startActivity(intent)
-
             }
         }
     }

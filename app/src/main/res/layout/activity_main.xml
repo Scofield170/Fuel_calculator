@@ -2,23 +2,22 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/laranja">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:foregroundGravity="center"
+        android:id="@+id/imageView"
         android:layout_width="258dp"
         android:layout_height="211dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
+        app:layout_constraintVertical_bias="0.525"
         app:srcCompat="@drawable/bomba_combustivel" />
 
     <TextView
@@ -37,14 +36,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView1"
         android:layout_width="360dp"
         android:layout_height="60dp"
         android:gravity="center"
         android:text="Quer descobrir quanto do seu gasto será em combustível na sua viagem?"
         android:textColor="@color/black"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/vamos_la"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,14 +51,12 @@
         app:layout_constraintVertical_bias="0.318" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/vamos_la"
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
         android:text="Vamos lá!"
-        android:textColor="@color/white"
         android:textSize="14dp"
-        android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
