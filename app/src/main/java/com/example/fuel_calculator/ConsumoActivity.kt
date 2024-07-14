@@ -42,8 +42,9 @@ class ConsumoActivity : AppCompatActivity() {
 
                 val intent = Intent(this, PrecoActivity::class.java)
                 intent.putExtra(KEY_COMBUSTIVEL, combustivel)
+                intent.putExtra(KEY_DISTANCIA1, distancia)
+                intent.putExtra(KEY_CONSUMO, consumo)
                 startActivity(intent)
-
             }
         }
     }
