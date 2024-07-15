@@ -27,7 +27,7 @@ class ResultadoActivity : AppCompatActivity() {
         val preco = intent.getFloatExtra(KEY_PRECO, 0f)
         val tvPreco = findViewById<TextView>(R.id.textView_preco)
 
-        tvPreco.text = preco.toString() + "€"
+        tvPreco.text = preco.toString() +  " €"
 
         val distancia = intent.getFloatExtra(KEY_DISTANCIA2, 0f)
         val tvDistancia = findViewById<TextView>(R.id.textView_distancia)
