@@ -3,9 +3,9 @@ Aplicativo Android nativo desenvolvido com a linguagem de programação Kotlin, 
  
 ## :camera_flash: Screenshots
 <img src="https://github.com/user-attachments/assets/3c02cf83-d90a-4d4d-9371-2ca7236c9352" width=200/>
-<img src="https://github.com/user-attachments/assets/5471752a-626b-4a14-95ec-bc41eaf77b57" width=200/>
+<img src="https://github.com/user-attachments/assets/392ae77d-90c4-4128-8ba9-becf9f21dd6d" width=200/>
 <img src="https://github.com/user-attachments/assets/3d4cd0a3-f03a-4ba5-803a-0534c3f7ca1e" width=200/>
-<img src="https://github.com/user-attachments/assets/59e8799f-43b7-4eee-8871-7a9a7189d522" width=200/>
+<img src="https://github.com/user-attachments/assets/4ae76bae-22fa-4a2c-be8b-2ba13a4cdef6" width=200/>
 <img src="https://github.com/user-attachments/assets/18a6ea7e-b031-4bf9-89ca-b1f50fe74dcf" width=200/>
 
 ## Tecnologias
