@@ -43,7 +43,7 @@
         android:gravity="center"
         android:hint="Digite o consumo do veículo, ex: 15 Km/l"
         android:inputType="numberDecimal"
-        android:maxLength="4"
+        android:maxLength="5"
         android:textColorHint="@color/black"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"

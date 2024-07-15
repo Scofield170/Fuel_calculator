@@ -43,7 +43,7 @@
         android:gravity="center"
         android:hint="Digite a distância até o destino, ex: 120 Km"
         android:inputType="numberDecimal"
-        android:maxLength="6"
+        android:maxLength="8"
         android:textColorHint="@color/black"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
