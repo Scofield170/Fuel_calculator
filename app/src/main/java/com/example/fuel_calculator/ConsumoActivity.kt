@@ -8,29 +8,31 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.fuel_calculator.databinding.ActivityConsumoBinding
 import com.google.android.material.snackbar.Snackbar
 
 const val KEY_DISTANCIA = "ConsumoActivity.KEY_DISTANCIA"
 
 class ConsumoActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityConsumoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityConsumoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_consumo)
 
         val distancia = intent.getFloatExtra(KEY_DISTANCIA, 0f)
-        val edtConsumo = findViewById<EditText>(R.id.consumo_veiculo)
 
-        val buttonConsumo = findViewById<Button>(R.id.button_consumo)
-
-        buttonConsumo.setOnClickListener {
-            val consumoStr: String = edtConsumo.text.toString()
+        binding.buttonConsumo.setOnClickListener {
+            val consumoStr: String = binding.consumoVeiculo.text.toString()
 
             if (consumoStr.isEmpty()) {
 
                 Snackbar
                     .make(
-                        edtConsumo,
+                        binding.consumoVeiculo,
                         "Preencha todos os campos",
                         Snackbar.LENGTH_LONG
                     )

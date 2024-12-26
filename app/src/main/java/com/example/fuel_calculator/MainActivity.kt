@@ -5,16 +5,19 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fuel_calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         enableEdgeToEdge()
 
-            val button = findViewById<Button>(R.id.vamos_la)
-
-            button.setOnClickListener {
+            binding.vamosLa.setOnClickListener {
                 val intent = Intent(this, DistanciaActivity::class.java)
                 startActivity(intent)
         }

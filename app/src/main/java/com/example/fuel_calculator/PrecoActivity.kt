@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.fuel_calculator.databinding.ActivityPrecoBinding
 import com.google.android.material.snackbar.Snackbar
 
 const val KEY_COMBUSTIVEL = "ConsumoActivity.KEY_COMBUSTIVEL"
@@ -15,27 +16,27 @@ const val KEY_DISTANCIA1 = "ConsumoActivity.KEY_DISTANCIA"
 const val KEY_CONSUMO = "ConsumoActivity.KEY_CONSUMO"
 
 class PrecoActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityPrecoBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityPrecoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_preco)
 
         val combustuivel = intent.getFloatExtra(KEY_COMBUSTIVEL, 0f)
         val distancia = intent.getFloatExtra(KEY_DISTANCIA1, 0f)
         val consumo = intent.getFloatExtra(KEY_CONSUMO, 0f)
 
-        val edtPreco = findViewById<EditText>(R.id.preco_combustivel)
-
-        val buttonPreco = findViewById<Button>(R.id.button_preco)
-
-        buttonPreco.setOnClickListener {
-            val precoStr: String = edtPreco.text.toString()
+        binding.buttonPreco.setOnClickListener {
+            val precoStr: String = binding.precoCombustivel.text.toString()
 
             if (precoStr.isEmpty()) {
 
                 Snackbar
                     .make(
-                        edtPreco,
+                        binding.precoCombustivel,
                         "Preencha todos os campos",
                         Snackbar.LENGTH_LONG
                     )

@@ -6,25 +6,27 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fuel_calculator.databinding.ActivityDistanciaBinding
 import com.google.android.material.snackbar.Snackbar
 
 class DistanciaActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDistanciaBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_distancia)
+        binding = ActivityDistanciaBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         enableEdgeToEdge()
 
-        val buttonDistancia = findViewById<Button>(R.id.button_distancia)
-        val edtDistancia = findViewById<EditText>(R.id.distancia)
-
-        buttonDistancia.setOnClickListener {
-            val distanciaStr: String = edtDistancia.text.toString()
+        binding.buttonDistancia.setOnClickListener {
+            val distanciaStr: String = binding.distancia.text.toString()
 
             if (distanciaStr.isEmpty()) {
 
                 Snackbar
                     .make(
-                        edtDistancia,
+                        binding.distancia,
                         "Preencha todos os campos",
                         Snackbar.LENGTH_LONG
                     )
