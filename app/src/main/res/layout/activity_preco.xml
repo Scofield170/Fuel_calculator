@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:foregroundGravity="center"
         android:layout_width="258dp"
         android:layout_height="211dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -25,9 +25,9 @@
         android:layout_height="61dp"
         android:gravity="center"
         android:text="Preço do combustível:"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.533"

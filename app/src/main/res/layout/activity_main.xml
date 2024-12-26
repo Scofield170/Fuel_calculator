@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/laranja">
+    android:background="@color/laranja"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,9 +55,9 @@
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
+        android:gravity="center"
         android:text="Vamos lá!"
         android:textSize="14dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
